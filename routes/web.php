@@ -26,6 +26,9 @@ Route::get('/Portfolio', function () {
 Route::get('/blog', function () {
     return view('cliants.blog');
 });
+Route::get('/contact', function () {
+    return view('cliants.contact');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

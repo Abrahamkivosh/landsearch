@@ -135,6 +135,8 @@ return [
     */
 
     'providers' => [
+        // To enable html to pdf
+        Nitmedia\Wkhtml2pdf\L5Wkhtml2pdfServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...
@@ -226,6 +228,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'PDF'    => Nitmedia\Wkhtml2pdf\Facades\Wkhtml2pdf::class,
 
     ],
 

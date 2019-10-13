@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd5d6b9a5e341b9af3d3c23ee3189ed7",
+    "content-hash": "0fcfc2b65325f49a61461dd3a1c8c188",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1100,6 +1100,54 @@
                 "php"
             ],
             "time": "2019-09-01T07:51:21+00:00"
+        },
+        {
+            "name": "nitmedia/wkhtml2pdf",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NitMedia/wkhtml2pdf.git",
+                "reference": "586df81dcbeb75b092dc35f9e8b3ef940d66e05a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NitMedia/wkhtml2pdf/zipball/586df81dcbeb75b092dc35f9e8b3ef940d66e05a",
+                "reference": "586df81dcbeb75b092dc35f9e8b3ef940d66e05a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Nitmedia\\Wkhtml2pdf": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nithin Meppurathu",
+                    "email": "admin@nitmedia.com"
+                }
+            ],
+            "description": "Html 2 Pdf - using wkhtml2pdf, work on 32bit and 64 bit linux + MacOS",
+            "keywords": [
+                "illuminate",
+                "laravel",
+                "pdf",
+                "wkhtml2pdf",
+                "wkhtmltopdf"
+            ],
+            "time": "2017-03-06T14:34:44+00:00"
         },
         {
             "name": "opis/closure",

@@ -9,7 +9,7 @@
                           <span class="icon-bar"></span>
                       </button>
           <div class="navbar-brand">
-            <a href="index.html"><h1><span>Com</span>pany</h1></a>
+            <a class=" text-info font-weight-bold pt-4" href="/"><h3 class="land" ><span>Land Search</span></h3></a>
           </div>
         </div>
 

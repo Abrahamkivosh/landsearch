@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Company-HTML Bootstrap theme</title>
+  <title>Land Search</title>
 
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -77,16 +77,8 @@
 
         <div class="col-md-4 col-md-offset-4">
           <div class="copyright">
-            &copy; Company Theme. All Rights Reserved.
-            <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Company
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
-          </div>
+            &copy; Thika Land Ministry. All Rights Reserved.
+            >
         </div>
       </div>
 

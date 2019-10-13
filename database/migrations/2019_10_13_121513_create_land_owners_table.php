@@ -15,6 +15,11 @@ class CreateLandOwnersTable extends Migration
     {
         Schema::create('land_owners', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('fname');
+            $table->string('lname');
+            $table->integer('nationalId')->unsigned();
+            $table->string('phone');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
