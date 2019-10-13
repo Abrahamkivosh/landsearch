@@ -34,7 +34,7 @@
             <div class="row slide-margin">
               <div class="col-sm-6">
                 <div class="carousel-content">
-                  <h2 class="animation animated-item-1">Welcome <span>Thika Land Information System</span></h2>
+                  <h2 class="animation animated-item-1">Welcome To <span>Thika Land Information System</span></h2>
                   <p class="animation animated-item-2">Know how we Solve your Problems related to land.</p>
                   <a class="btn-slide animation animated-item-3" href="/services">Read More</a>
                 </div>
