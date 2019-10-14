@@ -24,7 +24,7 @@
               <li role="presentation"><a href="/contact">Contact</a></li>
 
               <li role="presentation"><a href="/login"> <i class="fa fa-sign-in" aria-hidden="true">Login</i> </a></li>
-              <li role="presentation"><a href="/register"> <i class="fa fa-registered" aria-hidden="true">egister</i> </a></li>
+              <li role="presentation"><a href="/register"> <i class="fa fa-registered" aria-hidden="true">Register</i> </a></li>
             </ul>
           </div>
         </div>

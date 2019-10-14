@@ -4,8 +4,8 @@
 <div id="breadcrumb">
     <div class="container">
       <div class="breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li>Contact</li>
+        {{-- <li><a href="index.html">Home</a></li> --}}
+        {{-- <li>Contact</li> --}}
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
     <div class="container">
       <div class="center">
         <h2>Drop Your Message</h2>
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        {{-- <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> --}}
       </div>
       <div class="row contact-wrap">
         <div class="status alert alert-success" style="display: none"></div>
