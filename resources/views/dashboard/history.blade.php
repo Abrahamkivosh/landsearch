@@ -9,6 +9,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
+
                 <table class="table table-striped ">
                     <thead class="thead-dark">
                         <tr>
@@ -22,15 +23,34 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th class="align-middle text-center" scope="row">1</th>
-                            <td class="align-middle text-center">Steven</td>
-                            <td class="align-middle text-center">Short</td>
-                            <td class="align-middle text-center">@steve</td>
-                            <td class="align-middle text-center">@steve</td>
-                            <td class="align-middle text-center">@steve</td>
-                            <td class="btn btn-info align-middle text-center">View More</td>
+
+                        @if (count($search) > 0 )
+
+                        @foreach ($search as $key => $item)
+                            <tr>
+                            <th class="align-middle text-center" scope="row">{{ $key + 1 }}</th>
+                            <td class="align-middle text-center">{{ $item ->titleDeed }}</td>
+                            <td class="align-middle text-center">{{ $item->plotNumber }}</td>
+                            <td class="align-middle text-center">{{ $item->width ." by ". $item->length }}</td>
+                            <td class="align-middle text-center">
+                                    @if ($item->landprofile == null )
+
+                                    @else
+                                        {{ $item->landprofile->status }}
+                                    @endif
+                            </td>
+                            <td class="align-middle text-center">{{ $item->landowner->fname ." ". $item->landowner->lname}}</td>
+                            <td class="align-middle text-center">
+                                <a class=" btn btn-outline-primary" href="/history/{{ Auth()->User()->id }}/{{ $item->id }}">View More</a>
+                            </td>
                         </tr>
+
+                        @endforeach
+
+                        @else
+
+                        @endif
+
 
                     </tbody>
                 </table>

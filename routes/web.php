@@ -31,14 +31,14 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('/search', function () {
-    return view('dashboard/history');
-});
-
 Route::get('/plots', function () {
     return view('dashboard.plots');
 });
-
 Auth::routes();
 
 Route::get('/dash', 'HomeController@index')->name('home');
+Route::get('/dash', 'HomeController@searchLand')->name('searchLand');
+Route::get('/history/{id}', 'SearchHistoryController@landSearch')->name('allSearch');
+Route::get('/history/{id}/{land}', 'SearchHistoryController@singleSearch')->name('singleSearch');
+
+

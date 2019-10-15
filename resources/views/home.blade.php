@@ -30,15 +30,13 @@
                     Land Search
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
-                        <div class="form-group">
-                          <label for="">PLOT NUMBER</label>
-                          <input type="text" name="plotnumber" id="" class="form-control" placeholder="Type plot number" aria-describedby="helpId">
-                          <small id="helpId" class="text-muted">Plot number only</small>
-                        </div>
+                    <form action="{{ route('searchLand') }}" method="get">
+                        @csrf
+                        {{ csrf_field() }}
+
                         <div class="form-group">
                           <label for="">TITLE DEED</label>
-                          <input type="text" name="titildeed" id="" class="form-control" placeholder="Plot title deed" aria-describedby="helpId">
+                          <input type="text" name="titleDeed" id="" class="form-control" placeholder="Plot title deed" aria-describedby="helpId">
                           <small id="helpId" class="text-muted">Plot title deed number</small>
                         </div>
                         <div class=" form-group" >
@@ -52,17 +50,11 @@
             </div>
 
 
-
-
-
-
-
-
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header bg-info">
                                 <div class="row align-items-center">
                                     <div class="col-md-4">
-                                        <div class="card-title">Recent Orders</div>
+                                        <div class="card-title ">Your land search results</div>
                                     </div>
                                     <div class="col-md-8 d-flex justify-content-md-end">
                                         <div class="dropdown mr-2">
@@ -70,9 +62,9 @@
                                             Sort By
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Date</a>
-                                                <a class="dropdown-item" href="#">ID</a>
-                                                <a class="dropdown-item" href="#">Name</a>
+                                                <a class="dropdown-item" href="#">TitleDeed</a>
+                                                <a class="dropdown-item" href="#">Plot Number</a>
+                                                <a class="dropdown-item" href="#">Size</a>
                                             </div>
                                         </div>
                                         <div class="dropdown mr-4">
@@ -80,77 +72,86 @@
                                             Filter
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="filterOrdersDropdown">
-                                                <a class="dropdown-item" href="#">Delivered</a>
-                                                <a class="dropdown-item" href="#">Failed</a>
-                                                <a class="dropdown-item" href="#">Pending</a>
+                                                <a class="dropdown-item" href="#">TitleDeed</a>
+                                                <a class="dropdown-item" href="#">Plot Number</a>
+                                                <a class="dropdown-item" href="#">Size</a>
                                             </div>
                                         </div>
 
-                                        <form class="form-inline float-right">
-                                            <div class="form-group mr-3">
-                                                <label class="control-label mr-1">From:</label>
-                                                <input type="text" class="datepicker form-control" value="10/24/2017">
-                                            </div>
-                                            <div class="form-group mb-0">
-                                                <label class="control-label mr-1">To: </label>
-                                                <input type="text" class="datepicker form-control" value="10/25/2017">
-                                            </div>
-                                        </form>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table class="table m-0">
+                                <table class="table m-0 border-aqua table-striped ">
                                     <thead>
                                         <tr class="bg-fade">
-                                            <th style="width: 120px;">Date</th>
-                                            <th>Name</th>
-                                            <th style="width: 100px;"># INV</th>
-                                            <th style="width: 140px;">Amount</th>
+                                            <th style="width: 130px;">Plot Number</th>
+                                            <th style="width: 130px;">Title Deed</th>
+
+
+                                            <th style="width: 140px;">Size</th>
                                             <th style="width: 100px">Status</th>
-                                            <th></th>
+                                            <th style="width: 200px" >Land Owner</th>
+                                            <th>Take Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
+
+                                        @if (count($search) > 0)
+                                        @foreach ($search as $item)
                                         <tr>
-                                            <td class="align-middle">23 Feb 2018</td>
-                                            <td class="align-middle">
-                                                <div><i class="material-icons align-middle md-18 text-link-color">contacts</i> <a href="#"> Tara Knows</a>
-                                                    <em class="text-muted ml-1">(Sales Manager)</em>
-                                                </div>
+                                                <td class="align-middle">{{ $item->titleDeed }}</td>
+                                                <td class="align-middle">
+                                                        {{ $item->plotNumber }}
 
-                                            </td>
+                                                </td>
 
-                                            <td class="align-middle">
-                                                <a href="#">#31982</a>
-                                            </td>
-                                            <td class="align-middle">&dollar;8650.99</td>
-                                            <td class="align-middle">
-                                                <div class="badge badge-warning">pending</div>
-                                            </td>
-                                            <td class="align-middle" style="width:40px">
-                                                <a class="btn btn-white btn-sm" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="material-icons md-18 align-middle">more_vert</i>
-                                                    </a>
+                                                <td class="align-middle">
+                                                    <a href="#"> {{ $item->width ." by ". $item->length }} </a>
+                                                </td>
+                                                <td class="align-middle">
+                                                        @if ($item->landprofile == null )
+                                                        "N/A"
+                                                        @else
+                                                            {{ $item->landprofile->status }}
+                                                        @endif
+                                                </td>
+                                                <td class="align-middle">
+                                                    <div class=" h3 text text-capitalize">{{ $item->landowner->fname ." ". $item->landowner->lname}}</div>
+                                                </td>
+                                                <td class="align-middle" style="width:40px">
+                                                    <a class="btn btn-white btn-sm" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="material-icons md-18 align-middle">more_vert</i>
+                                                        </a>
 
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">
-                                                        <i class="material-icons md-14 align-middle">assignment</i>
-                                                        <span class="align-middle">Manage</span>
-                                                    </a>
-                                                    <a class="dropdown-item" href="#">
-                                                        <i class="material-icons md-14 align-middle">content_copy</i>
-                                                        <span class="align-middle">Duplicate</span>
-                                                    </a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item text-danger" href="#">
-                                                        <i class="material-icons md-14 align-middle">delete</i>
-                                                        <span class="align-middle">Delete</span>
-                                                    </a>
-                                                </div>
-                                            </td>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="material-icons md-14 align-middle">assignment</i>
+                                                            <span class="align-middle">Manage</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="material-icons md-14 align-middle">content_copy</i>
+                                                            <span class="align-middle">Duplicate</span>
+                                                        </a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item text-danger" href="#">
+                                                            <i class="material-icons md-14 align-middle">delete</i>
+                                                            <span class="align-middle">Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </td>
                                         </tr>
+
+                                        @endforeach
+                                        @else
+                                        <tr>
+                                            <td colspan="3" class=" text text-info L1" >Please make a search</td>
+                                        </tr>
+
+                                        @endif
+
 
                                     </tbody>
                                 </table>

@@ -18,7 +18,7 @@
                     <!-- MENU -->
                     <ul class="drawer-menu" id="dasboardMenu" data-children=".drawer-submenu">
                         <li class="drawer-menu-item active ">
-                            <a href="/home">
+                            <a href="/dash">
                                 <i class="material-icons">poll</i>
                                 <span class="drawer-menu-text"> My Dashboard</span>
                             </a>
@@ -41,7 +41,7 @@
                             </a>
                             <ul class="collapse " id="uiComponentsMenu">
                                 <li class="drawer-menu-item "><a href="/search">Search</a></li>
-                                <li class="drawer-menu-item "><a href="/history">Passed Search</a></li>
+                                <li class="drawer-menu-item "><a href="/history/{{ Auth()->User()->id }}">Passed Search</a></li>
                                 <li class="drawer-menu-item "><a href="#">Policies</a></li>
 
                             </ul>
