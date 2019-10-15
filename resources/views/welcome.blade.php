@@ -48,10 +48,10 @@
         </div>
         <p>
 
-            User registration
-            Log in to the system
-            Search for the land records using the correct credentials
-            Print the land records pdf format
+            User registration</p>
+            <p>Log in to the system</p>
+        <p>Search for the land records using the correct credentials</p>
+    <p>Print the land records pdf format
 
 
         </p>
@@ -83,7 +83,7 @@
       </div>
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
         <img src="{{ asset('asset/images/news.jpg') }}" class="img-responsive" />
-        <h3>Avoid Land transactions outside the Ministry of Lands, CS Karoney tells Kenyans  /h3>
+        <h3>Avoid Land transactions outside the Ministry of Lands, CS Karoney tells Kenyans  </h3>
         <p>	Lands Cabinet Secretary, Farida Karoney has advised members of the public to seek Government services within the right offices.
 
             The CS noted that land owners had fallen victims of conmen and land brokers which has led to loss of property and land ownership documents.
