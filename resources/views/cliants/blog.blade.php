@@ -121,7 +121,7 @@
                             <h4>
                                     How much does the world spend on the Sustainable Development Goals?
                             </h4>
-                            <p>TPouring several colors of paint into a single bucket produces a gray pool of muck, not a shiny rainbow.</p>
+                            <p>Pouring several colors of paint into a single bucket produces a gray pool of muck, not a shiny rainbow.</p>
                             {{-- <a class="btn btn-primary readmore">Read More <i class="fa fa-angle-right"></i></a> --}}
                           </div>
                         </div>

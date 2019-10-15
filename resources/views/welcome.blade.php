@@ -144,7 +144,7 @@
             </div>
             <div class="media-body">
               <h2>Have a question or need consultation services?</h2>
-              <p>We are just a phone call away. YOu cn rreach us via +254 000 00 00</p>
+              <p>We are just a phone call away. You can reach us via +254 000 00 00</p>
             </div>
           </div>
         </div>
