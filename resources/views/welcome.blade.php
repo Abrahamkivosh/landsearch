@@ -45,33 +45,31 @@
         <img src="{{ ('asset/images/sear.jpg')}}" class="img-responsive" />
         <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <h2>Land Search Services</h2>
-        </div>
-        <p>
-
-            User registration</p>
+        </div><h4>
+        <p>User registration</p>
             <p>Log in to the system</p>
         <p>Search for the land records using the correct credentials</p>
-    <p>Print the land records pdf format
-
-
-        </p>
+    <p>Print the land records pdf format</p></h4>
       </div>
 
       <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
         <h2>Land Registration Services</h2>
         <p>
 
-            Registration of documents: Transfers, Charges. Discharges, Succession, correction of names, mutations and partition, Power of attorney, Leases and Caution.
-            Issuance of Land Titles for all categories of land registered under the various land registration statutes;
-            Issuance of Land Titles Searches;
-            Determination of land boundary disputes;
-            Preparation of provisional and replacement titles;
-            Preparation and issuance of Certificates of Incorporation
-            Assessment and stamping of instruments with the requisite Stamp Duty
-            Inspection and control of Duty Franking Machines;
-            Processing conversion of Titles from one land statute to another.
+            <h4>Registration of documents: 
+                <p>Transfers, Charges. 
+                    Discharges, Succession, correction of names,
+                     mutations and partition, Power of attorney, Leases and Caution.</p><br />
+           <p> Issuance of Land Titles for all categories of land registered under the various land registration statutes;</p>
+            <p>Issuance of Land Titles Searches;</p>
+            <p> Determination of land boundary disputes;</p>
+             <p>Preparation of provisional and replacement titles;</p>
+            <p>Preparation and issuance of Certificates of Incorporation</p>
+            <p>Assessment and stamping of instruments with the requisite Stamp Duty</p>
+            <p>Inspection and control of Duty Franking Machines;</p>
+            <p>Processing conversion of Titles from one land statute to another.</p></h4>
 
-        </p>
+        
       </div>
     </div>
   </div>

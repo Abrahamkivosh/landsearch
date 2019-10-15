@@ -49,8 +49,8 @@
               <img class="img-responsive" src="{{ asset('asset/images/port2.jpeg') }}"  alt="">
               <div class="overlay">
                 <div class="recent-work-inner">
-                  <h3><a href="#">Business theme</a></h3>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                  <h3><a href="#">The gendered politics of land ownership</a></h3>
+                  <p>One of the fundamental resources that is essential for the development and sustenance of people in Africa is land.</p>
                   <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                 </div>
               </div>
