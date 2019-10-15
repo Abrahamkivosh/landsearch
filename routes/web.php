@@ -31,8 +31,9 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('dash/{id}/history', 'SearchHistoryController@index')->name('allSearch');
-
+Route::get('/search', function () {
+    return view('dashboard/history');
+});
 
 Route::get('/plots', function () {
     return view('dashboard.plots');

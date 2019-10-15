@@ -42,6 +42,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Blog', 'user_id', 'id');
     }
 
+    public function lands()
+    {
+        return $this->belongsToMany('App\Land', 'land_user', 'user_id', 'land_id');
+    }
+
     public function roles()
     {
         return $this->belongsToMany('App\Role', 'role_user', 'user_id', 'role_id');
