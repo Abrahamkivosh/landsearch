@@ -24,45 +24,35 @@
       </div>
       <div class="col-md-5 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
         <div class="skill">
-          <h2>Our Skills</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h2>Vision</h2>
+          <p>“To be a globally competitive organization in sustainable land management”.</p>
 
-          <div class="progress-wrap">
-            <h3>Graphic Design</h3>
-            <div class="progress">
-              <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                <span class="bar-width">85%</span>
-              </div>
 
             </div>
           </div>
+          <div class="col-md-5 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="skill">
+                  <h2>Mission</h2>
+                  <p>“To facilitate improvement of the livelihood of Kenyans through efficient land administration, equitable access, secure tenure and sustainable management of land resource”.</p>
 
-          <div class="progress-wrap">
-            <h4>HTML</h4>
-            <div class="progress">
-              <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                <span class="bar-width">95%</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="progress-wrap">
-            <h4>CSS</h4>
-            <div class="progress">
-              <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <span class="bar-width">80%</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="progress-wrap">
-            <h4>Wordpress</h4>
-            <div class="progress">
-              <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                <span class="bar-width">90%</span>
-              </div>
-            </div>
-          </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="skill">
+                          <h2>OBjectives</h2>
+                          <p>
+                                1. Ensure accessibility, equity and sustainable management of land resource for socio-economic development
+                               <br /> 2. Strengthen institutional capacity for efficient and effective service delivery
+                            </p>
+
+
+
+                            </div>
+                          </div>
+
+
         </div>
       </div>
     </div>
@@ -73,19 +63,28 @@
       <h3>Our Team</h3>
       <div class="text-center">
         <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <img src="images/services/1.jpg" alt="">
-          <h4>John Doe</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</p>
+          <img src="{{ asset('asset/images/face.jpeg') }}" alt="">
+          <h4>name</h4>
+          <p>M Cabinet Secretary<br />
+
+                Ministry of Lands and Physical Planning
+
+                </p>
         </div>
         <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-          <img src="images/services/2.jpg" alt="">
-          <h4>John Doe</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</p>
+          <img src="{{ asset('asset/images/face.jpeg') }}"alt="">
+          <h4>name</h4>
+          <p>Chief Administrative Secretary<br />
+
+                Ministry of Lands & Physical Planning,
+                </p>
         </div>
         <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-          <img src="images/services/3.jpg" alt="">
-          <h4>John Doe</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</p>
+          <img src="{{ asset('asset/images/face.jpeg') }}"alt="">
+          <h4>name</h4>
+          <p> Principal Secretary<br />
+
+                Ministry of Lands & Physical Planning,</p>
         </div>
       </div>
     </div>
