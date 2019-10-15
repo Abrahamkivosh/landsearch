@@ -29,6 +29,15 @@ Route::get('/blog', function () {
 Route::get('/contact', function () {
     return view('cliants.contact');
 });
+
+
+Route::get('dash/{id}/history', 'SearchHistoryController@index')->name('allSearch');
+
+
+Route::get('/plots', function () {
+    return view('dashboard.plots');
+});
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dash', 'HomeController@index')->name('home');

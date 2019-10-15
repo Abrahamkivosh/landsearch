@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\LandDetial;
+use App\Land;
 use Illuminate\Http\Request;
 
-class LandDetialController extends Controller
+class LandController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class LandDetialController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\LandDetial  $landDetial
+     * @param  \App\Land  $land
      * @return \Illuminate\Http\Response
      */
-    public function show(LandDetial $landDetial)
+    public function show(Land $land)
     {
         //
     }
@@ -52,10 +52,10 @@ class LandDetialController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\LandDetial  $landDetial
+     * @param  \App\Land  $land
      * @return \Illuminate\Http\Response
      */
-    public function edit(LandDetial $landDetial)
+    public function edit(Land $land)
     {
         //
     }
@@ -64,10 +64,10 @@ class LandDetialController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\LandDetial  $landDetial
+     * @param  \App\Land  $land
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, LandDetial $landDetial)
+    public function update(Request $request, Land $land)
     {
         //
     }
@@ -75,10 +75,10 @@ class LandDetialController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\LandDetial  $landDetial
+     * @param  \App\Land  $land
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LandDetial $landDetial)
+    public function destroy(Land $land)
     {
         //
     }

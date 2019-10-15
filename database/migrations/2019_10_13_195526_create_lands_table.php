@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLandDetialsTable extends Migration
+class CreateLandsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateLandDetialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('land_detials', function (Blueprint $table) {
+        Schema::create('lands', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("titleDeed");
+            $table->string("titleDeed")->unique();
             $table->string("plotNumber");
             $table->integer('width');
             $table->integer('length');
+            $table->unsignedBigInteger('landOwner_id')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateLandDetialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('land_detials');
+        Schema::dropIfExists('lands');
     }
 }

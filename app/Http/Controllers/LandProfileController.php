@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\SearchHistory;
+use App\LandProfile;
 use Illuminate\Http\Request;
 
-class SearchHistoryController extends Controller
+class LandProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class SearchHistoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\SearchHistory  $searchHistory
+     * @param  \App\LandProfile  $landProfile
      * @return \Illuminate\Http\Response
      */
-    public function show(SearchHistory $searchHistory)
+    public function show(LandProfile $landProfile)
     {
         //
     }
@@ -52,10 +52,10 @@ class SearchHistoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\SearchHistory  $searchHistory
+     * @param  \App\LandProfile  $landProfile
      * @return \Illuminate\Http\Response
      */
-    public function edit(SearchHistory $searchHistory)
+    public function edit(LandProfile $landProfile)
     {
         //
     }
@@ -64,10 +64,10 @@ class SearchHistoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\SearchHistory  $searchHistory
+     * @param  \App\LandProfile  $landProfile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SearchHistory $searchHistory)
+    public function update(Request $request, LandProfile $landProfile)
     {
         //
     }
@@ -75,10 +75,10 @@ class SearchHistoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\SearchHistory  $searchHistory
+     * @param  \App\LandProfile  $landProfile
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SearchHistory $searchHistory)
+    public function destroy(LandProfile $landProfile)
     {
         //
     }
