@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    {{--  <div class="card">
+   <div class="card">
         <div class="card-header">
             <h4 class="card-title">
                 My land search History
@@ -38,9 +38,7 @@
 
 
         </div>
-    </div>  --}}
-@foreach ($landID as $land)
-   0.0321 
-@endforeach
+    </div>
+
 
 @stop

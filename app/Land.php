@@ -12,6 +12,12 @@ class Land extends Model
         return $this->hasOne('App\LandProfile', 'land_id', 'id');
     }
 
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
+
+
     public function landOwner()
     {
         return $this->belongsTo('App\LandOwner', 'landOwner_id', 'id');
