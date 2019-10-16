@@ -6,6 +6,7 @@ use App\Land;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class SearchHistoryController extends Controller
 {
@@ -20,5 +21,14 @@ class SearchHistoryController extends Controller
         $land = Land::findOrfail($land);
 
         return view('dashboard/singleHistory',compact('user','land'));
+    }
+
+    public function storeSearch(Request $request , $id){
+        $user = Auth::user();
+        $user_id = $id;
+        $land_id = $request->input('land_id');
+
+        $user->lands()->attach([$user_id, $land_id]);
+        return redirect()->route('allSearch',$user_id);
     }
 }

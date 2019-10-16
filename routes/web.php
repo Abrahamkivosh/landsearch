@@ -40,5 +40,10 @@ Route::get('/dash', 'HomeController@index')->name('home');
 Route::get('/dash', 'HomeController@searchLand')->name('searchLand');
 Route::get('/history/{id}', 'SearchHistoryController@landSearch')->name('allSearch');
 Route::get('/history/{id}/{land}', 'SearchHistoryController@singleSearch')->name('singleSearch');
+Route::post('/history/{id}', 'SearchHistoryController@storeSearch')->name('storeSearch');
+
+
+Route::resource('lands', 'LandController');
+
 
 

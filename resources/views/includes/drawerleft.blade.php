@@ -40,7 +40,7 @@
                                 <span class="drawer-menu-text"> Land Info</span>
                             </a>
                             <ul class="collapse " id="uiComponentsMenu">
-                                <li class="drawer-menu-item "><a href="/search">Search</a></li>
+                                <li class="drawer-menu-item "><a href="/lands">All Lands</a></li>
                                 <li class="drawer-menu-item "><a href="/history/{{ Auth()->User()->id }}">Passed Search</a></li>
                                 <li class="drawer-menu-item "><a href="#">Policies</a></li>
 

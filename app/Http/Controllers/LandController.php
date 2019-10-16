@@ -14,7 +14,7 @@ class LandController extends Controller
      */
     public function index()
     {
-        //
+        $lands = Land::orderBy('id', 'DESC')->paginate(15);
     }
 
     /**

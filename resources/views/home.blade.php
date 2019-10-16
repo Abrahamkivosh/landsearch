@@ -4,21 +4,21 @@
             <div class="row font-1">
                 <div class="col-lg-4">
                     <div class="card card-body flex-row align-items-center">
-                        <h5 class="m-0"><i class="material-icons align-middle text-muted md-18">content_paste</i> Today</h5>
-                        <div class="text-primary ml-auto">$12,319</div>
+                        <h5 class="m-0"><i class="material-icons align-middle text-muted md-18 text-capitalize ">content_paste</i> Number of search</h5>
+                        <div class="text-primary ml-auto">{{ count(Auth()->User()->lands)  }}</div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card card-body flex-row align-items-center">
-                        <h5 class="m-0"> Last 7 Days</h5>
-                        <div class="text-primary ml-auto">$35,129</div>
+                        <h5 class="m-0"> Blogs avilable</h5>
+                        <div class="text-primary ml-auto">129</div>
                         <i class="material-icons text-success md-18 ml-1">arrow_upward</i>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card card-body flex-row align-items-center">
                         <h5 class="m-0"> Past 30 Days</h5>
-                        <div class="text-primary ml-auto">$142,545</div>
+                        <div class="text-primary ml-auto">545</div>
                         <i class="material-icons text-success md-18 ml-1">arrow_upward</i>
                     </div>
                 </div>
@@ -43,9 +43,6 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    Footer
                 </div>
             </div>
 
@@ -127,14 +124,21 @@
                                                         </a>
 
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item" href="/history">
                                                             <i class="material-icons md-14 align-middle">assignment</i>
-                                                            <span class="align-middle">Manage</span>
+                                                            <span class="align-middle">View More</span>
                                                         </a>
-                                                        <a class="dropdown-item" href="#">
+
+                                                        <form action="{{ route('storeSearch',Auth()->User()->id) }}" class="dropdown-item" enctype="multipart/form-data" method="post">
+                                                            @method("POST")
                                                             <i class="material-icons md-14 align-middle">content_copy</i>
-                                                            <span class="align-middle">Duplicate</span>
-                                                        </a>
+                                                            @csrf
+                                                            {{ csrf_field() }}
+
+                                                            <input type="hidden" name="land_id" value="{{ $item->id }}">
+                                                            <button type="submit"  class="align-middle display-none">Save search</button>
+                                                        </form>
+
                                                         <div class="dropdown-divider"></div>
                                                         <a class="dropdown-item text-danger" href="#">
                                                             <i class="material-icons md-14 align-middle">delete</i>
