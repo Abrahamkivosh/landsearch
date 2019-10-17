@@ -78,9 +78,9 @@
                         </li>
                             <a href="events-calendar.html">
                         <li class="drawer-menu-item  ">
-                            <a href="maps.html">
+                            <a href="/dash/map">
                                 <i class="material-icons">pin_drop</i>
-                                <span class="drawer-menu-text"> Maps</span>
+                                <span class="drawer-menu-text"> Map</span>
                             </a>
                         </li>
                     </ul>

@@ -35,7 +35,8 @@ class HomeController extends Controller
 
         return view('home',compact('search'));
     }
-
-
+    public function map(){
+        return view('dashboard.map');
+    }
 
 }

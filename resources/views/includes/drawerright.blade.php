@@ -24,13 +24,13 @@
                     <!-- MENU -->
                     <ul class="drawer-menu" id="userMenu" data-children=".drawer-submenu">
                         <li class="drawer-menu-item">
-                            <a href="/account">
+                            <a href="/profile/{{ Auth::User()->id }}">
                                 <i class="material-icons">lock</i>
                                 <span class="drawer-menu-text"> Account</span>
                             </a>
                         </li>
                         <li class="drawer-menu-item">
-                            <a href="/profile">
+                            <a href="/profile/{{ Auth::User()->id }}">
                                 <i class="material-icons">account_circle</i>
                                 <span class="drawer-menu-text"> Profile</span>
                             </a>

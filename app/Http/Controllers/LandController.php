@@ -12,9 +12,28 @@ class LandController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
+    public function search(Request $request){
+        $query = $request->query('search');
+        $lands = Land::where('titleDeed','like','%'. $query.'%')
+
+           ->orderBy('id', 'desc')
+           ->take(10)
+           ->get();
+
+           return view('dashboard/land/index',compact('lands'));
+           return redirect('/lands')->route('search')->with('lands',$lands);
+
+
+
+    }
     public function index()
     {
         $lands = Land::orderBy('id', 'DESC')->paginate(15);
+        return view('dashboard/land/index',compact('lands'));
     }
 
     /**
@@ -46,7 +65,11 @@ class LandController extends Controller
      */
     public function show(Land $land)
     {
-        //
+        $land = Land::findOrfail($land->id);
+
+
+
+        return  view('dashboard/land/show',compact('land'));
     }
 
     /**

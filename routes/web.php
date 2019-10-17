@@ -42,8 +42,10 @@ Route::get('/history/{id}', 'SearchHistoryController@landSearch')->name('allSear
 Route::get('/history/{id}/{land}', 'SearchHistoryController@singleSearch')->name('singleSearch');
 Route::post('/history/{id}', 'SearchHistoryController@storeSearch')->name('storeSearch');
 
-
+Route::get('dash/map', 'HomeController@map')->name('map');
 Route::resource('lands', 'LandController');
+Route::get('lands','LandController@search')->name('search');
+Route::get('/profile/{id}', 'ProfileController@show')->name('profile');
 
 
 
