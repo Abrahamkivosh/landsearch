@@ -23,6 +23,13 @@ class SearchHistoryController extends Controller
         return view('dashboard/singleHistory',compact('user','land'));
     }
 
+    // public function printsingleSearch($id , $land){
+    //     $user = User::findOrfail($id);
+    //     $land = Land::findOrfail($land);
+
+    //     return view('dashboard/singleHistory',compact('user','land'));
+    // }
+
     public function storeSearch(Request $request , $id){
         $user = Auth::user();
         $user_id = $id;

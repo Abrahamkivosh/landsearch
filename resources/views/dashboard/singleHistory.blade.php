@@ -11,6 +11,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('public/js/src/css/print-preview.css') }}" rel="stylesheet">
 @stop
 
 
@@ -103,8 +105,15 @@
         <div class="card-footer">
             <p>
 
-                <button type="button" name="" id="" class="btn btn-primary "> <i class="fa fa-print" aria-hidden="true">Print</i> </button>
-                <button type="button" class="btn btn-info"> <i class="fa fa-file-pdf-o" aria-hidden="true">Generate</i> </button>
+
+                <button @click="printme" type="button" name="" id="print" class="btn btn-primary "> <i class="fa fa-print" aria-hidden="true">Print</i> </button>
+
+
+                        {{-- <a href="/history/{{ $user->id }}/{{ $land->id }}/preview" id="print" class="btnprn"></a>
+                            <button type="button"  class="btn btn-info">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true">
+                   Generate</i>
+                </button> --}}
                 <a name="" id="" class="btn float-right btn-primary" href="/history/{{ Auth()->User()->id }}" role="button"> <i class="fa fa-backward" aria-hidden="true">  Back </i> </a>
 
             </p>
@@ -114,3 +123,9 @@
 </div>
 
 @stop
+
+@section('scripts')
+    <script src="">
+    </script>
+@stop
+

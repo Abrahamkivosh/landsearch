@@ -19,7 +19,7 @@ class CreateLandsTable extends Migration
             $table->string("plotNumber");
             $table->integer('width');
             $table->integer('length');
-            $table->unsignedBigInteger('landOwner_id')->nullable();
+            $table->unsignedBigInteger('landOwner_id');
             $table->timestamps();
         });
     }

@@ -17,8 +17,8 @@ class CreateLandProfilesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('land_id');
             $table->string('status');
-            $table->longText('encumbrance')->nullable()->default('text');
-            $table->foreign('land_id')->references('id')->on('lands')->onDelete('cascade');
+            $table->longText('encumbrance');
+            //$table->foreign('land_id')->references('id')->on('lands')->onDelete('cascade');
             $table->timestamps();
         });
     }
