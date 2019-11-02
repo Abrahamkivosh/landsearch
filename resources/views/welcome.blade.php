@@ -2,6 +2,10 @@
 @extends('layouts.cliantapp')
 
 
+@section('top')
+@include('includes.homeslide')
+@stop
+
 @section('content')
 <div class="feature">
     <div class="container">
@@ -56,8 +60,8 @@
         <h2>Land Registration Services</h2>
         <p>
 
-            <h4>Registration of documents: 
-                <p>Transfers, Charges. 
+            <h4>Registration of documents:
+                <p>Transfers, Charges.
                     Discharges, Succession, correction of names,
                      mutations and partition, Power of attorney, Leases and Caution.</p><br />
            <p> Issuance of Land Titles for all categories of land registered under the various land registration statutes;</p>
@@ -69,7 +73,7 @@
             <p>Inspection and control of Duty Franking Machines;</p>
             <p>Processing conversion of Titles from one land statute to another.</p></h4>
 
-        
+
       </div>
     </div>
   </div>
