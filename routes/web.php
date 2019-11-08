@@ -49,4 +49,20 @@ Route::get('lands','LandController@search')->name('search');
 Route::get('/profile/{id}', 'ProfileController@show')->name('profile');
 
 
+//app/Http/Controllers/AuthAdmin
+
+
+    Route::prefix('admin1')->group(function () {
+        Route::get('test', 'Admin\LoginController@test');
+
+       Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
+       Route::post('login', 'Admin\LoginController@login')->name('admin.login.submit');
+
+       Route::get('register', 'Admin\RegisterController@showRegistrationForm')->name('admin.register');
+       Route::get('/', 'AdminController@index')->name('dashboard');
+    });
+
+
+
+
 

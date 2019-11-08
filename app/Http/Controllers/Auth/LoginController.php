@@ -18,7 +18,11 @@ class LoginController extends Controller
     |
     */
 
+
     use AuthenticatesUsers;
+    public function test(){
+        return "Okay";
+    }
 
     /**
      * Where to redirect users after login.
