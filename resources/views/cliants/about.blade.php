@@ -1,6 +1,39 @@
 
 @extends('layouts.cliantapp')
 
+@section('top')
+<section id="main-slider" class="no-margin">
+    <div class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image: url(asset/LAND/about.jpg)">
+          <div class="container">
+            <div class="row slide-margin">
+              <div class="col-sm-6">
+                <div class="carousel-content">
+                  <h2 class="animation animated-item-1">Welcome To <span>Thika Land Information System</span></h2>
+                  <p class="animation animated-item-2"></p>We facilitate improvement of Kenyans livelihood through efficient administration, equitable access, secure tenure and sustainable management of Land resources</p>
+                  {{-- <a class="btn-slide animation animated-item-3" href="/services">Read More</a> --}}
+                </div>
+              </div>
+
+              <div class="col-sm-6 hidden-xs animation animated-item-4">
+                <div class="slider-img">
+                  <img src="{{ asset('asset/LAND/download(1).jpg') }}" class="img-responsive">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!--/.item-->
+      </div>
+      <!--/.carousel-inner-->
+    </div>
+    <!--/.carousel-->
+  </section>
+
+@stop
+
 @section('content')
 <div id="breadcrumb">
     <div class="container">
@@ -17,9 +50,9 @@
       <hr>
       <div class="col-md-7 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
         <img src="{{ asset('asset/images/port1.jpeg') }}" class="img-responsive">
-        <h4>The Land Portal Foundation believes access to information is crucial to 
-            achieve good land governance and to secure land rights for vulnerable people. 
-            We help partners to create and disseminate land governance data and information 
+        <h4>The Land Portal Foundation believes access to information is crucial to
+            achieve good land governance and to secure land rights for vulnerable people.
+            We help partners to create and disseminate land governance data and information
             through linked and open data technologies.<h4>
         <p>The Ministry is headquartered at Ardhi House in community.
             This is where all National Lands matters and other concerns are handled.
@@ -42,7 +75,7 @@
                   <h2>Mission</h2>
                   <p><h4>“To facilitate improvement of the livelihood of Kenyans through efficient land administration, equitable access, secure tenure and sustainable management of land resource”.</h4></p>
 
-                
+
 
                     </div>
                   </div>

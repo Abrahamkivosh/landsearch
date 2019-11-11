@@ -18,8 +18,7 @@ class CreateAdminsTable extends Migration
             $table->string('name');
             $table->integer('nationalId')->unsigned();
             $table->string('phone');
-            $table->string('job_title')->nullable()->default('Clack');
-
+            $table->string('job_title')->nullable()->default('Clerk');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

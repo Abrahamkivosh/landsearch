@@ -11,6 +11,7 @@ class allTableSeeder extends Seeder
      */
     public function run()
     {
+        factory(App\Admin::class,5)->create();
         factory(App\User::class,10)->create();
         factory(App\LandOwner::class,10)->create();
         factory(App\Land::class,60)->create();

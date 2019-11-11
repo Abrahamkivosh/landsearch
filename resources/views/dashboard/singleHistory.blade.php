@@ -46,10 +46,8 @@
                         <h2><strong>PART A - </strong> <em>PROPERTY SECTION (EASEMENT , ETC)</em> </h2>
                         <dl>
                             <dt><strong>Nature of the title</strong> </dt>
-                            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Excepturi atque officia ipsam. Iste culpa maiores, totam maxime,
-                                amet quos assumenda recusandae magni tempora quasi a qui ea.
-                                Praesentium, officiis ut.</dd>
+                            {{--  {{ dd($land->nature) }}  --}}
+                            <dd>{{ $land->landprofile->nature}}</dd>
                         </dl>
                         <dt><strong>Approximate Area</strong></dt>
                         <dd><em>{{ $land->width ." by ". $land->length }}</em></dd>

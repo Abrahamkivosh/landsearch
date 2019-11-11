@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Admin;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
@@ -23,11 +25,23 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+    //guard to use
+
+    protected function guard()
+    {
+        return Auth::guard('admin');
+    }
+
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
+    public function showRegistrationForm()
+    {
+        return view('authAdmin.register');
+    }
+
     protected $redirectTo = '/admin1';
 
     /**
@@ -52,7 +66,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:40'],
             'phone' => ['required', 'string', 'max:15'],
             'nationalId' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:75', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:75', 'unique:admins'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -65,11 +79,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        if ($data['job_title'] == null) {
+            $value = "Clerk";
+        } else {
+           $value =  $data['job_title'];
+        }
+
+        return Admin::create([
             'name' => $data['name'],
             'nationalId' => $data['nationalId'],
             'phone' => $data['phone'],
             'email' => $data['email'],
+            'job_title'=>$value,
             'password' => Hash::make($data['password']),
         ]);
     }

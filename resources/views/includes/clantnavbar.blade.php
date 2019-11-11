@@ -25,6 +25,8 @@
 
               <li role="presentation"><a href="/login"> <i class="fa fa-sign-in" aria-hidden="true">Login</i> </a></li>
               <li role="presentation"><a href="/register"> <i class="fa fa-registered" aria-hidden="true">Register</i> </a></li>
+
+              <li class=" text text-capitalize text-bold" role="presentation"><a href="/admin1/login"> <i class="fa fa-registered" aria-hidden="true">Admin Login</i> </a></li>
             </ul>
           </div>
         </div>

@@ -54,11 +54,16 @@ Route::get('/profile/{id}', 'ProfileController@show')->name('profile');
 
     Route::prefix('admin1')->group(function () {
         Route::get('test', 'Admin\LoginController@test');
+        Route::resource('clerks', 'ClerkController');
 
        Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
        Route::post('login', 'Admin\LoginController@login')->name('admin.login.submit');
-
+       Route::resource('clients', 'ClientController');
+       Route::get('owners', 'AdminController@owners')->name('owners');
+       Route::resource('land', 'Admin\LandController');
+       Route::get('/{id}', 'AdminController@profile')->name('profile');
        Route::get('register', 'Admin\RegisterController@showRegistrationForm')->name('admin.register');
+       Route::post('register', 'Admin\RegisterController@register')->name('admin.register.submit');
        Route::get('/', 'AdminController@index')->name('dashboard');
     });
 

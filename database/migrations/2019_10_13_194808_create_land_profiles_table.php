@@ -16,6 +16,7 @@ class CreateLandProfilesTable extends Migration
         Schema::create('land_profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('land_id');
+            $table->string('nature');
             $table->string('status');
             $table->longText('encumbrance');
             //$table->foreign('land_id')->references('id')->on('lands')->onDelete('cascade');

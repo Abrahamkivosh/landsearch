@@ -11,14 +11,14 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>150</h3>
+            <h3>{{ count($land) }}</h3>
 
             <p>Land Records</p>
           </div>
           <div class="icon">
             <i class="ion ion-bag"></i>
           </div>
-          <a href="/land" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/admin1/land" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -33,7 +33,7 @@
           <div class="icon">
             <i class="ion ion-stats-bars"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/admin1/owners" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -41,14 +41,14 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h3>44</h3>
+            <h3>{{ count($users) }}</h3>
 
             <p>User Registrations</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/admin1/clients" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -63,7 +63,7 @@
           <div class="icon">
             <i class="ion ion-pie-graph"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/admin1/clients" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -102,100 +102,82 @@
           <div class="box-body">
             <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
             <ul class="todo-list">
-              <li>
-                <!-- drag handle -->
-                <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                <!-- checkbox -->
-                <input type="checkbox" value="">
-                <!-- todo text -->
-                <span class="text">Design a nice theme</span>
-                <!-- Emphasis label -->
-                <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                <!-- General tools such as edit or delete-->
-                <div class="tools">
-                  <i class="fa fa-edit"></i>
-                  <i class="fa fa-trash-o"></i>
-                </div>
-              </li>
+
               <li>
                     <span class="handle">
                       <i class="fa fa-ellipsis-v"></i>
                       <i class="fa fa-ellipsis-v"></i>
                     </span>
                 <input type="checkbox" value="">
-                <span class="text">Make the theme responsive</span>
+                <span class="text">Add new Clerk to the system</span>
                 <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
                 <div class="tools">
                   <i class="fa fa-edit"></i>
                   <i class="fa fa-trash-o"></i>
                 </div>
               </li>
-              <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                <input type="checkbox" value="">
-                <span class="text">Let theme shine like a star</span>
-                <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                <div class="tools">
-                  <i class="fa fa-edit"></i>
-                  <i class="fa fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                <input type="checkbox" value="">
-                <span class="text">Let theme shine like a star</span>
-                <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                <div class="tools">
-                  <i class="fa fa-edit"></i>
-                  <i class="fa fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                <input type="checkbox" value="">
-                <span class="text">Check your messages and notifications</span>
-                <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                <div class="tools">
-                  <i class="fa fa-edit"></i>
-                  <i class="fa fa-trash-o"></i>
-                </div>
-              </li>
-              <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                <input type="checkbox" value="">
-                <span class="text">Let theme shine like a star</span>
-                <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
-                <div class="tools">
-                  <i class="fa fa-edit"></i>
-                  <i class="fa fa-trash-o"></i>
-                </div>
-              </li>
+
             </ul>
           </div>
           <!-- /.box-body -->
           <div class="box-footer clearfix no-border">
-            <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+            {{-- <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button> --}}
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#modelId">
+                <i class="fa fa-plus">Add item</i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                            <div class="modal-header">
+                                    <h5 class="modal-title">Add job you are supposed to do</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form action="#" method="post">
+                                    <div class="form-group">
+                                        <label for="description">description</label>
+                                        <input id="description" class="form-control" type="text" name="description">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="duration">Duration in hours</label>
+                                        <input id="duration" class="form-control" type="number" name="duration">
+                                    </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $('#exampleModal').on('show.bs.modal', event => {
+                    var button = $(event.relatedTarget);
+                    var modal = $(this);
+                    // Use above variables to manipulate the DOM
+
+                });
+            </script>
+
+
+
           </div>
         </div>
         <!-- /.box -->
 
         <!-- quick email widget -->
-        <div class="box box-info">
+        {{--  <div class="box box-info">
           <div class="box-header">
             <i class="fa fa-envelope"></i>
 
@@ -226,7 +208,7 @@
             <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
               <i class="fa fa-arrow-circle-right"></i></button>
           </div>
-        </div>
+        </div>  --}}
 
       </section>
       <!-- /.Left col -->
